@@ -64,6 +64,10 @@ table = LookupTable()
 while True:    
     # Enter value of fragmented info
     attribute = input("ENTER INFO: ")
+    
+    if (attribute.lower() == 'quit'):
+        break
+        
     print()
     print()
     
