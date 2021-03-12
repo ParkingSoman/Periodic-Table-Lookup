@@ -53,6 +53,10 @@ class LookupTable():
 
 # Prints all info from list
 def printInfo(element):
+    if element == ["None", "None", -1, -1]:
+        print("Does not exist")
+        return
+        
     print("Name: " + element[0])
     print("Symbol: " + element[1])
     print("Atomic Number: " + str(element[2]))
