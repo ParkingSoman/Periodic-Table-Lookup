@@ -14,7 +14,7 @@ with open(table_path, 'r') as data:
     
 class LookupTable():
     def info(self, element):
-        return [periodic_table[element]['name'], periodic_table[element]['symbol'], periodic_table[element]['number'], periodic_table[element]['atomic_mass'], periodic_table[element]['category']]
+        return [periodic_table[element]['name'], periodic_table[element]['symbol'], periodic_table[element]['number'], periodic_table[element]['atomic_mass'], periodic_table[element]['category'], periodic_table[element]['period'], periodic_table[element]['xpos'], periodic_table[element]['shells']]
     
     # Find all other info by name
     def groupName(self, name):
@@ -53,16 +53,24 @@ class LookupTable():
 
 # Prints all info from list
 def printInfo(element):
+    
     if element == ["None", "None", -1, -1]:
         print("Does not exist")
         return
-        
+    
     print("Name: " + element[0])
     print("Symbol: " + element[1])
     print("Atomic Number: " + str(element[2]))
     print("Atomic Mass: " + str(element[3]))
-    print("Neutrons: " + str(int(round(element[3], 0) - element[2])))  
+    print("Neutrons: " + str(int(round(element[3], 0) - element[2])))
+    print("Period: " + str(element[5]))
+    print("Group: " + str(element[6]))
     print("Category: " + element[4])
+    print()
+    print()
+    
+    for i in range(len(element[7])):
+        print("Shell " + str(i + 1) + ": " + str(element[7][i]))
 
 table = LookupTable()
 
@@ -72,7 +80,7 @@ while True:
     
     if (attribute.lower() == 'quit'):
         break
-        
+    
     print()
     print()
     
@@ -99,3 +107,4 @@ while True:
             
             
     print("___________________________")
+    
