@@ -14,7 +14,7 @@ with open(table_path, 'r') as data:
     
 class LookupTable():
     def info(self, element):
-        return [periodic_table[element]['name'], periodic_table[element]['symbol'], periodic_table[element]['number'], periodic_table[element]['atomic_mass'], periodic_table[element]['category]]
+        return [periodic_table[element]['name'], periodic_table[element]['symbol'], periodic_table[element]['number'], periodic_table[element]['atomic_mass'], periodic_table[element]['category']]
     
     # Find all other info by name
     def groupName(self, name):
