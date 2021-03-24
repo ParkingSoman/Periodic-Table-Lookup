@@ -8,7 +8,7 @@ import json
 from Lookup import LookupTable
 
 # Load periodic table info from file
-table_path = "/Users/shonu/Downloads/periodic-table-lookup.json"
+table_path = "Put json file path here"
 with open(table_path, 'r') as data:
     periodic_table = json.load(data)
 
